@@ -1,0 +1,225 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: "Malgun Gothic", "Sans-serif";
+}
+
+@font-face {
+	font-family: "GmarketSans";
+	font-weight: 200;
+	src: url("../font/GmarketSansBold.woff") format("woff");
+}
+@font-face {
+	font-family: "GmarketSans";
+	font-weight: 100;
+	src: url("../font/GmarketSansMedium.woff") format("woff");
+}
+
+.wrap-event {
+	width: 100%;
+}
+
+.wrap-img {
+	width: 100%;
+}
+.wrap-img img {
+	width: 100%;
+}
+.wrap-write {
+	width: 100%;
+	margin: 0 auto;
+	/* background-color: red; */
+	padding-bottom: 60px;
+	box-sizing: border-box;
+}
+
+h2 {
+	font-family: "GmarketSans";
+	font-weight: 200;
+	font-size: 20px;
+	padding: 40px 0 15px 15px;
+	letter-spacing: -1px;
+}
+
+.box-agree {
+	width: 100%;
+	background-color: #eee;
+	box-sizing: border-box;
+	padding: 20px;
+	line-height: 26px;
+	font-size: 13px;
+}
+.box-agree ol li {
+	list-style-position: inside;
+	text-indent: -13px;
+	padding-left: 15px;
+	line-height: 19px;
+}
+
+.wrap-chk {
+	padding: 20px 0 0 20px;
+}
+
+.wrap-info table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.wrap-info table th {
+	padding: 10px 0 10px 10px;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	font-family: "GmarketSans";
+	font-weight: 100;
+	font-size: 14px;
+	text-align: left;
+}
+
+.wrap-info table td {
+	width: 70%;
+	padding: 10px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+.wrap-info table select {
+	width: 100%;
+	padding: 4px;
+}
+
+.wrap-info table label {
+	width: 75px;
+	padding: 4px 0;
+	display: inline-block;
+}
+
+.wrap-info table td.phone input {
+	padding: 4px;
+	width: 18%;
+	text-align: center;
+}
+
+.wrap-chklist ul li {
+	width: 100%;
+}
+.chklist-q {
+	width: 100%;
+	padding: 20px 15px 20px 44px;
+	background-color: #eee;
+	box-sizing: border-box;
+	position: relative;
+}
+.chklist-q span {
+	position: absolute;
+	top: 20px;
+	left: 15px;
+	font-weight: bold;
+}
+.chklist-q p {
+	display: inline-block;
+	width: 100%;
+	font-size: 16px;
+}
+.chklist-a {
+	width: 100%;
+	width: 100%;
+	padding: 20px 15px;
+	box-sizing: border-box;
+}
+.chklist-a label {
+	padding-right: 10px;
+}
+.wrap-btn {
+	width: 100%;
+	text-align: center;
+	padding-top: 50px;
+}
+.wrap-btn button {
+	padding: 15px 20px;
+	text-align: center;
+	background-color: #f5a3a1;
+	border: none;
+	color: #fff;
+	font-family: "GmarketSans";
+	font-weight: 200;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+/* 팝업 */
+
+.wrap-layerpop {
+	position: fixed;
+	z-index: 9999;
+	background: rgba(0, 0, 0, 0.7);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+}
+.wrap-layerpop::before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.layer {
+	display: inline-block;
+	vertical-align: middle;
+	height: auto;
+	width: 80%;
+	background: #fff;
+	text-align: center;
+	padding: 0 0 30px 0;
+}
+.layer-tit {
+	width: 100%;
+	padding: 40px 20px 30px 20px;
+	background-color: #f5a3a1;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	box-sizing: border-box;
+	position: relative;
+}
+.layer-tit .wrap-img img {
+	width: 30%;
+}
+.layer-con {
+	padding: 30px 20px 0px 20px;
+	line-height: 20px;
+	text-align: justify;
+	letter-spacing: -0.5px;
+}
+.layer input {
+	width: 200px;
+	padding: 7px;
+	border: 1px solid #e0e0e0;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.layer button.border {
+	width: 200px;
+	padding: 10px 0;
+	margin-top: 10px;
+}
+.layer-close {
+	position: absolute;
+	cursor: pointer;
+	right: 20px;
+	top: 20px;
+}
+.layer-close img {
+	width: 18px;
+}
+.layer-tit .level {
+	font-size: 24px;
+	font-family: "GmarketSans";
+	font-weight: 200;
+	padding-top: 15px;
+}
