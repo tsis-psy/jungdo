@@ -89,9 +89,10 @@ h2 {
 }
 
 .wrap-info table label {
-	width: 75px;
+	width: 78px;
 	padding: 4px 0;
 	display: inline-block;
+	letter-spacing: -1px;
 }
 
 .wrap-info table td.phone input {
