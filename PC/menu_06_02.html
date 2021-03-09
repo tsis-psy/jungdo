@@ -754,6 +754,7 @@
 										<div class="list_opinion">
 											<ul>
 												<li>
+													<!-- 의견본문 -->
 													<div class="wrap_opinion">
 														<span class="date">2021-02-10 12:15</span>
 
@@ -771,7 +772,23 @@
 														<span class="like">45</span>
 														<span>댓글 <span class="num_reply">3</span></span>
 													</div>
+													<!-- //의견본문 -->
+													<!-- 의견수정 -->
+													<div class="modify_opinion">
+														<div class="write_box">
+															<textarea>
+동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화삼천리 화려강산대한사람 대한으로 길이 보전하세 남산위에 저 소나무 철갑을 두른듯 바람 서리 불변함은 우리 기상일세
+															</textarea
+															>
+														</div>
+														<div class="btn_box">
+															<button class="cancel">취소</button>
+															<button class="confirm">의견 수정</button>
+														</div>
+													</div>
+													<!-- //의견수정 -->
 													<div class="wrap_reply">
+														<!-- 댓글본문 -->
 														<div class="reply">
 															<span class="date">2021-02-10 12:10</span>
 															<div class="edit">
@@ -784,20 +801,43 @@
 																기상일세
 															</div>
 														</div>
+														<!-- //댓글본문 -->
+
+														<!-- 댓글수정 -->
+														<div class="modify_reply">
+															<div class="write_box">
+																<textarea>
+동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화삼천리 화려강산대한사람 대한으로 길이 보전하세 남산위에 저 소나무 철갑을 두른듯 바람 서리 불변함은 우리 기상일세
+																</textarea
+																>
+															</div>
+															<div class="btn_box">
+																<button class="cancel">취소</button>
+																<button class="confirm">댓글 수정</button>
+															</div>
+														</div>
+														<!-- //댓글수정 -->
+
+														<!-- 댓글쓰기 -->
 														<div class="write_reply">
 															<div class="write_box">
 																<textarea placeholder="댓글 작성"></textarea>
 															</div>
-															<div class="write_box">
+															<div class="btn_box">
 																<input type="password" placeholder="비밀번호 입력" />
 																<span class="txt_s"
 																	>* 작성하신 의견을 수정/삭제 할 때 사용하실 비밀번호 입니다. 분실시 수정/삭제
 																	불가합니다.</span
 																>
-																<button>댓글 등록</button>
+																<button class="confirm">댓글 등록</button>
 															</div>
 														</div>
-														<div class="wrap_close_btn"><button class="close_reply">댓글 접기</button></div>
+														<!-- //댓글쓰기 -->
+														<!-- 댓글접기 -->
+														<div class="wrap_close_btn">
+															<button class="close_reply">댓글 접기</button>
+														</div>
+														<!-- //댓글접기 -->
 													</div>
 												</li>
 												<li>
@@ -937,82 +977,82 @@
 
 		<script type="text/javascript">
 			$(function () {
-				$(".com_tab")
-					.find(".tab_a > li")
-					.on("click", function () {
+				$('.com_tab')
+					.find('.tab_a > li')
+					.on('click', function () {
 						var idx = $(this).index();
 
-						$(".com_tab").find(".tab_a > li").removeClass("on").eq(idx).addClass("on");
-						$(".com_tab").find(".conts").removeClass("on").eq(idx).addClass("on");
+						$('.com_tab').find('.tab_a > li').removeClass('on').eq(idx).addClass('on');
+						$('.com_tab').find('.conts').removeClass('on').eq(idx).addClass('on');
 					});
 
-				$(".com_tab_child")
-					.find(".tab_a_child > li")
-					.on("click", function () {
+				$('.com_tab_child')
+					.find('.tab_a_child > li')
+					.on('click', function () {
 						var idx = $(this).index();
 						console.log(idx);
 
-						$(".com_tab_child").find(".tab_a_child > li").removeClass("on").eq(idx).addClass("on");
+						$('.com_tab_child').find('.tab_a_child > li').removeClass('on').eq(idx).addClass('on');
 						// $('.com_tab_child').find('.conts_child').removeClass('on').eq(idx).addClass('on');
 
-						$(".com_tab_child").find(".conts_child > .text_c").hide();
-						$(".com_tab_child").find(".conts_child > .text_c").eq(idx).show();
+						$('.com_tab_child').find('.conts_child > .text_c').hide();
+						$('.com_tab_child').find('.conts_child > .text_c').eq(idx).show();
 
 						if (idx == 0) {
-							$(".TYPE1").show();
-							$(".TYPE2").hide();
-							$(".CP_CODE").hide();
+							$('.TYPE1').show();
+							$('.TYPE2').hide();
+							$('.CP_CODE').hide();
 
-							$("#action").val("insertCommitteeBoard.json");
+							$('#action').val('insertCommitteeBoard.json');
 						} else if (idx == 1) {
-							$(".TYPE1").hide();
-							$(".TYPE2").show();
-							$(".CP_CODE").show();
+							$('.TYPE1').hide();
+							$('.TYPE2').show();
+							$('.CP_CODE').show();
 
-							$("#action").val("insertCompanyBoard.json");
+							$('#action').val('insertCompanyBoard.json');
 						}
 					});
 
-				$("#board").ajaxForm({
+				$('#board').ajaxForm({
 					beforeSubmit: function (data, form, option) {
-						var action = $("#action").val();
+						var action = $('#action').val();
 
-						if ($("input:checkbox[id='agree']").is(":checked") == false) {
-							alert("개인정보 수집 동의가 필요합니다.");
+						if ($("input:checkbox[id='agree']").is(':checked') == false) {
+							alert('개인정보 수집 동의가 필요합니다.');
 							return false;
 						}
 
-						if (action.indexOf("insertCommitteeBoard") >= 0) {
-							if ($("#TYPE1").val() == null || $("#TYPE1").val() == "") {
-								alert("작성구분을 선택해주세요");
+						if (action.indexOf('insertCommitteeBoard') >= 0) {
+							if ($('#TYPE1').val() == null || $('#TYPE1').val() == '') {
+								alert('작성구분을 선택해주세요');
 								return false;
 							}
 						}
 
-						if (action.indexOf("insertCompanyBoard") >= 0) {
-							if ($("#TYPE2").val() == null || $("#TYPE2").val() == "") {
-								alert("작성구분을 선택해주세요");
+						if (action.indexOf('insertCompanyBoard') >= 0) {
+							if ($('#TYPE2').val() == null || $('#TYPE2').val() == '') {
+								alert('작성구분을 선택해주세요');
 								return false;
 							}
-							if ($("#CP_CODE").val() == null || $("#CP_CODE").val() == "") {
-								alert("계열사를 선택해주세요");
+							if ($('#CP_CODE').val() == null || $('#CP_CODE').val() == '') {
+								alert('계열사를 선택해주세요');
 								return false;
 							}
 						}
 
-						if ($("#TITLE").val() == "") {
-							alert("제목을 입력해주세요");
+						if ($('#TITLE').val() == '') {
+							alert('제목을 입력해주세요');
 							return false;
 						}
 
-						if ($("#SUMMARY").val() == "") {
-							alert("내용을 입력해주세요");
+						if ($('#SUMMARY').val() == '') {
+							alert('내용을 입력해주세요');
 							return false;
 						}
 
-						option["url"] = action;
+						option['url'] = action;
 
-						if (confirm("등록된 내용으로 접수하시겠습니까?")) {
+						if (confirm('등록된 내용으로 접수하시겠습니까?')) {
 							return true;
 						}
 
@@ -1020,26 +1060,26 @@
 					},
 					success: function (data, status) {
 						data = JSON.parse(data);
-						if (data.result == "SUCCESS") {
-							alert("정상적으로 접수되었습니다.");
+						if (data.result == 'SUCCESS') {
+							alert('정상적으로 접수되었습니다.');
 
-							$("#NAME").val("");
-							$("#TEL").val("");
-							$("#EMAIL").val("");
-							$("#TITLE").val("");
-							$("#SUMMARY").val("");
-							$("#TYPE1").val("");
-							$("#TYPE2").val("");
-							$("#CP_CODE").val("");
+							$('#NAME').val('');
+							$('#TEL').val('');
+							$('#EMAIL').val('');
+							$('#TITLE').val('');
+							$('#SUMMARY').val('');
+							$('#TYPE1').val('');
+							$('#TYPE2').val('');
+							$('#CP_CODE').val('');
 
-							if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
-								$("#file").replaceWith($("#file").clone(true));
+							if (navigator.userAgent.toLowerCase().indexOf('msie') != -1) {
+								$('#file').replaceWith($('#file').clone(true));
 							} else {
-								$("#file").val("");
+								$('#file').val('');
 							}
-							$("#fileName").text("선택된 파일없음");
+							$('#fileName').text('선택된 파일없음');
 
-							$("input:checkbox[id='agree']").prop("checked", false);
+							$("input:checkbox[id='agree']").prop('checked', false);
 						} else {
 							alert(data.result_msg);
 							console.log(data);
@@ -1048,55 +1088,55 @@
 					error: function () {},
 				});
 
-				$("#file").change(function () {
+				$('#file').change(function () {
 					console.log(this.files[0]);
 					if (this.files[0] == undefined) {
-						$("#fileName").text("선택된 파일없음");
+						$('#fileName').text('선택된 파일없음');
 						return;
 					}
 
 					console.log(this.files[0].name);
 
-					var ext = $(this).val().split(".").pop().toLowerCase();
+					var ext = $(this).val().split('.').pop().toLowerCase();
 					console.log(ext);
-					if (ext != "zip") {
-						alert("zip 파일만 등록가능합니다.");
-						$(this).val("");
+					if (ext != 'zip') {
+						alert('zip 파일만 등록가능합니다.');
+						$(this).val('');
 						return;
 					}
 
 					var size = this.files[0].size;
 					if (size > 1024 * 1024 * 10) {
-						alert("10MB 이하 파일만 등록가능합니다.");
-						$(this).val("");
+						alert('10MB 이하 파일만 등록가능합니다.');
+						$(this).val('');
 						return;
 					}
 
-					$("#fileName").text(this.files[0].name);
+					$('#fileName').text(this.files[0].name);
 				});
 			});
 		</script>
 		<!-- 파이 차트 -->
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
-			google.charts.load("current", {packages: ["corechart"]});
+			google.charts.load('current', {packages: ['corechart']});
 			google.charts.setOnLoadCallback(drawChart);
 
 			function drawChart() {
 				var data = google.visualization.arrayToDataTable([
-					["opinion", "vote"],
-					["도움이 된다", 11],
-					["도움이 안된다", 2],
+					['opinion', 'vote'],
+					['도움이 된다', 11],
+					['도움이 안된다', 2],
 				]);
 
 				var options = {
 					// title: "My Daily Activities",
-					colors: ["#F2994A", "#bdbdbd"],
-					backgroundColor: "#f4f4f4",
-					legend: "right",
+					colors: ['#F2994A', '#bdbdbd'],
+					backgroundColor: '#f4f4f4',
+					legend: 'right',
 				};
 
-				var chart = new google.visualization.PieChart(document.getElementById("piechart"));
+				var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
 				chart.draw(data, options);
 			}
