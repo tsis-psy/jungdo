@@ -1786,6 +1786,9 @@ select:focus {
 	display: block;
 	margin: 0 auto;
 	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 .layer button.border {
 	width: 100%;
