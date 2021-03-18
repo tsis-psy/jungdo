@@ -1508,7 +1508,7 @@ select:focus {
 	-webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	text-align: justify;
+	text-align: left;
 }
 .like {
 	background-image: url(../img/ic_like.svg);
