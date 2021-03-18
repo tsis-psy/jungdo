@@ -1619,7 +1619,8 @@ select:focus {
 	background-color: #fff;
 	font-weight: bold;
 	padding-left: 8px;
-	padding: 3px 0 3px 8px;
+	padding: 3px 0 3px 10px;
+	font-size: 14px;
 }
 
 .btn_box button.cancel {
@@ -1662,6 +1663,7 @@ select:focus {
 	background-position: 95% 45%;
 	background-repeat: no-repeat;
 	padding-right: 20px;
+	font-size: 14px;
 }
 
 /* 전체의견보기탭 */
@@ -1683,7 +1685,7 @@ select:focus {
 .opinion_tabs_board label.yes_tab,
 .opinion_tabs_board label.no_tab {
 	padding: 10px 8px;
-	font-size: 15px;
+	font-size: 16px;
 	color: #333;
 }
 .boards {
