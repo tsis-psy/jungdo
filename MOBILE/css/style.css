@@ -1521,6 +1521,17 @@ select:focus {
 	display: inline-block;
 }
 
+.like:active {
+	background-image: url(../img/ic_like_on.svg);
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-position: 0 65%;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 6px 10px 3px 22px;
+	display: inline-block;
+}
+
 .agree_tab .opinion_num {
 	padding: 0px 8px;
 	border-radius: 15px;

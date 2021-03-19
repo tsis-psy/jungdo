@@ -1657,6 +1657,15 @@ h5 span.info {
 	background-position: 0 50%;
 	font-weight: bold;
 	padding: 3px 10px 3px 24px;
+	cursor: pointer;
+}
+.like:active {
+	background-image: url(../img/ic_like_on.svg);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	font-weight: bold;
+	padding: 3px 10px 3px 24px;
+	cursor: pointer;
 }
 
 .wrap_best .agree {
@@ -1819,6 +1828,10 @@ h5 span.info {
 .reply {
 	border-bottom: 1px solid #e0e0e0;
 	padding: 20px 0 10px 0;
+}
+
+.btn_reply {
+	cursor: pointer;
 }
 .write_reply {
 	padding: 15px 0 0 0;
