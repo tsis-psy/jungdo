@@ -110,6 +110,7 @@
 	text-overflow: ellipsis;
 	overflow: hidden;
 	text-align: left;
+	height: 174px;
 }
 
 .info {
