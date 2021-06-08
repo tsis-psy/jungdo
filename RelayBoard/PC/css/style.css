@@ -90,4 +90,22 @@
 	width: 360px;
 	height: 360px;
 	border: 1px solid #c4c4c4;
+	padding: 26px;
+}
+.writer {
+	margin-bottom: 35px;
+	color: #666;
+}
+.writer .team {
+	font-weight: bold;
+}
+.listbox .txt {
+	font-size: 22px;
+	font-weight: bold;
+	background-color: skyblue;
+}
+
+.like {
+	background-image: url(../../img/ic_like.svg);
+	background-repeat: no-repeat;
 }
