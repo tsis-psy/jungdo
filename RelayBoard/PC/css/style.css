@@ -91,6 +91,7 @@
 	height: 360px;
 	border: 1px solid #c4c4c4;
 	padding: 26px;
+	position: relative;
 }
 .writer {
 	margin-bottom: 35px;
@@ -102,10 +103,29 @@
 .listbox .txt {
 	font-size: 22px;
 	font-weight: bold;
-	background-color: skyblue;
+	line-height: 140%;
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align: left;
 }
 
-.like {
+.info {
+	position: absolute;
+	bottom: 26px;
+}
+.info .like {
 	background-image: url(../../img/ic_like.svg);
 	background-repeat: no-repeat;
+	padding: 0 16px 0 24px;
+}
+.info .num-reply {
+	background-image: url(../../img/ic-reply.svg);
+	background-repeat: no-repeat;
+	padding: 0 50px 0 20px;
+}
+.info .date {
+	float: right;
 }
