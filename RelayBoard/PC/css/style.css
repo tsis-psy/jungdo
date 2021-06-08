@@ -110,7 +110,7 @@
 	text-overflow: ellipsis;
 	overflow: hidden;
 	text-align: left;
-	height: 174px;
+	height: 176px;
 }
 
 .info {
@@ -125,7 +125,7 @@
 .info .num-reply {
 	background-image: url(../../img/ic-reply.svg);
 	background-repeat: no-repeat;
-	padding: 0 50px 0 20px;
+	padding: 0 130px 0 20px;
 }
 .info .date {
 	float: right;
