@@ -369,7 +369,9 @@ button.normal {
 	font-weight: bold;
 }
 /* 팝업 */
-
+#modal {
+	display: none;
+}
 .wrap-layerpop {
 	position: fixed;
 	z-index: 9999;
