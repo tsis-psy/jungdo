@@ -33,6 +33,7 @@ textarea {
 	overflow: auto;
 	outline: none;
 	resize: none;
+	border-radius: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
