@@ -50,7 +50,7 @@ input {
 
 select {
 	border: 1px solid rgb(211, 211, 211);
-	height: 26px;
+	height: 30px;
 	background-color: #fff;
 	padding: 0 10px;
 	border-radius: 0;
@@ -113,7 +113,7 @@ button.normal {
 
 .wrap-content {
 	width: 100%;
-	padding-top: 247px;
+	padding-top: 252px;
 }
 .wrap-content-article {
 	width: 100%;
