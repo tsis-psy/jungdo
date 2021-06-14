@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>태광그룹 행동약속 캠페인</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="wrap-tit">
+				<div class="tit">태광그룹 행동약속 캠페인</div>
+				<div class="subtit">여러분의 약속을 응원합니다!</div>
+				<button class="normal open" >로그인</button>
+			</div>
+		</div>
+		<!-- 로그인모달 -->
+		<div class="wrap-layerpop modal">
+			<div class="wrap-login">
+				<div class="pop-header">
+					<span>로그인</span>
+					<span class="pop-close close"><img src="../img/ic_close.svg" alt="닫기" /></span>
+				</div>
+				<div class="pop-content">
+					<p>원활한 서비스 이용을 위해 로그인이 필요합니다.<br />(통합인사정보시스템 계정 사용)</p>
+					<form>
+						<select>
+							<option>계열사 선택</option>
+							<option>태광산업</option>
+							<option>대한화섬</option>
+							<option>흥국생명</option>
+							<option>흥국화재</option>
+							<option>흥국증권</option>
+							<option>흥국자산운용</option>
+							<option>고려저축은행</option>
+							<option>예가람저축은행</option>
+							<option>티캐스트</option>
+							<option>한국케이블텔레콤</option>
+							<option>티시스</option>
+							<option>티알엔</option>
+						</select>
+						<input type="text" placeholder="사번 입력" />
+						<input type="password" placeholder="비밀번호 입력" />
+						<button>로그인</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- //로그인모달 -->
+
+		<script type="text/javascript">
+			// Modal을 가져옵니다.
+			var modals = document.getElementsByClassName('modal');
+			// Modal을 띄우는 클래스 이름을 가져옵니다.
+			var btns = document.getElementsByClassName('open');
+			// Modal을 닫는 close 클래스를 가져옵니다.
+			var spanes = document.getElementsByClassName('close');
+			var funcs = [];
+
+			// Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+			function Modal(num) {
+				return function () {
+					// 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+					btns[num].onclick = function () {
+						modals[num].style.display = 'block';
+						console.log(num);
+					};
+
+					// <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+					spanes[num].onclick = function () {
+						modals[num].style.display = 'none';
+					};
+				};
+			}
+
+			// 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+			for (var i = 0; i < btns.length; i++) {
+				funcs[i] = Modal(i);
+			}
+
+			// 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+			for (var j = 0; j < btns.length; j++) {
+				funcs[j]();
+			}
+
+			// Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+			window.onclick = function (event) {
+				if (event.target.className == 'modal') {
+					event.target.style.display = 'none';
+				}
+			};
+		</script>
+		</script>
+	</body>
+</html>
