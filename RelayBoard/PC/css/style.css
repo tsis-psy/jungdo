@@ -352,6 +352,9 @@ button.normal {
 .reply .btns {
 	float: right;
 }
+.reply .btns span {
+	cursor: pointer;
+}
 .reply .date,
 .reply .btns,
 .reply .team {
