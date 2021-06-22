@@ -432,9 +432,9 @@ button.normal {
 .wrap-write {
 	display: inline-block;
 	vertical-align: middle;
-	width: 80vw;
+	width: 84vw;
 	background: #fff;
-	text-align: center;
+	text-align: justify;
 	padding: 0 0 10px 0;
 }
 
@@ -442,7 +442,7 @@ button.normal {
 	display: inline-block;
 	vertical-align: middle;
 	height: auto;
-	width: 80vw;
+	width: 84vw;
 	background: #fff;
 	text-align: center;
 	padding: 0 0 30px 0;
@@ -458,12 +458,14 @@ button.normal {
 	box-sizing: border-box;
 }
 .pop-content {
-	padding: 24px;
+	padding: 20px;
 }
 .pop-content p {
-	text-align: left;
+	text-align: center;
 	padding-bottom: 20px;
 	line-height: 150%;
+	font-size: 13px;
+	letter-spacing: -1px;
 }
 .pop-content input,
 .pop-content textarea {
