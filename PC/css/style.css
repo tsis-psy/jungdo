@@ -1691,13 +1691,16 @@ h5 span.info {
 	bottom: 10px;
 	left: 0;
 }
-.like:active {
-	background-image: url(../img/ic_like_on.svg);
+.like_best:active {
+	background-image: url(../img/ic_like.svg);
 	background-repeat: no-repeat;
 	background-position: 0 50%;
 	font-weight: bold;
-	padding: 3px 10px 3px 24px;
+	padding: 5px 10px 3px 24px;
 	cursor: pointer;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
 }
 
 .like {
