@@ -39,6 +39,14 @@ textarea:-mos-input-placeholder {
 	font-size: 14px;
 }
 
+pre {
+	white-space: pre-wrap; /* CSS3*/
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-all; /* Internet Explorer 5.5+ */
+}
+
 /*board*/
 .srchbox {
 	border: 1px solid #ccc;
@@ -1655,9 +1663,41 @@ h5 span.info {
 	line-height: 150%;
 	border-bottom: 1px solid #dfdfdf;
 	padding: 15px 0;
+	height: 90px;
+
+	position: relative;
 }
 .wrap_best ul li:last-child {
 	border: none;
+}
+
+.wrap_best .best_txt {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align: left; /*justify로 설정시 말줄임표가 텍스트와 겹침*/
+}
+
+.like_best {
+	background-image: url(../img/ic_like.svg);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	font-weight: bold;
+	padding: 5px 10px 3px 24px;
+	cursor: pointer;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+}
+.like:active {
+	background-image: url(../img/ic_like_on.svg);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	font-weight: bold;
+	padding: 3px 10px 3px 24px;
+	cursor: pointer;
 }
 
 .like {
@@ -1665,7 +1705,7 @@ h5 span.info {
 	background-repeat: no-repeat;
 	background-position: 0 50%;
 	font-weight: bold;
-	padding: 3px 10px 3px 24px;
+	padding: 5px 10px 3px 24px;
 	cursor: pointer;
 }
 .like:active {
@@ -1724,20 +1764,20 @@ h5 span.info {
 }
 
 /* 의견작성 */
-.wrpa_write_opinion {
+.wrap_write_opinion {
 	width: 100%;
 	margin: 10px 0 20px 0;
 	text-align: center;
 	display: block;
 }
 
-.wrpa_write_opinion table {
+.wrap_write_opinion table {
 	width: 100%;
 	border-collapse: collapse;
 	/* border-top: 1px solid #999; */
 }
 
-.wrpa_write_opinion .tit {
+.wrap_write_opinion .tit {
 	border-top: 1px solid #999;
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
@@ -1748,7 +1788,7 @@ h5 span.info {
 	font-weight: bold;
 }
 
-.wrpa_write_opinion .con {
+.wrap_write_opinion .con {
 	border-top: 1px solid #999;
 	border-bottom: 1px solid #999;
 	text-align: left;
@@ -1756,14 +1796,14 @@ h5 span.info {
 	padding: 10px 10px;
 }
 
-.wrpa_write_opinion input {
+.wrap_write_opinion input {
 	font-size: 14px;
 	border: 1px solid rgb(211, 211, 211);
 	padding: 0px 5px;
 	height: 24px;
 }
 
-.wrpa_write_opinion textarea {
+.wrap_write_opinion textarea {
 	width: 680px;
 	height: 100px;
 	border: 1px solid rgb(211, 211, 211);
@@ -1822,7 +1862,9 @@ h5 span.info {
 	padding: 10px 0;
 	line-height: 20px;
 }
-
+.list_opinion .txt_reply pre {
+	word-wrap: break-word;
+}
 .list_opinion .wrap_opinion,
 .list_opinion .modify_opinion {
 	padding: 17px 0;
