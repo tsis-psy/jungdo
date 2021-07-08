@@ -239,9 +239,13 @@ input[type='search'] {
 	color: #b4985a;
 	font-weight: bold;
 	font-size: 0.8em;
+	padding-right: 1em;
 }
 
-.date,
+.date {
+	font-size: 14px;
+	color: #999;
+}
 .view {
 	font-size: 14px;
 	padding-left: 1em;
@@ -413,6 +417,7 @@ h3 {
 	padding: 30px 0;
 	font-size: 16px;
 	box-sizing: border-box;
+	min-height: 90vh;
 }
 
 .content_board_wrapper {
@@ -427,6 +432,7 @@ h3 {
 	padding: 30px 0;
 	font-size: 16px;
 	box-sizing: border-box;
+	min-height: 90vh;
 }
 
 /*스와이퍼end*/
